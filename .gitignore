@@ -1,0 +1,6 @@
+*.pyc
+*.cnf
+**/__pycache__
+**/recipes_env
+**/.ycm_extra_conf.py
+
