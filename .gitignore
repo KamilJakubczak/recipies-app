@@ -3,4 +3,4 @@
 **/__pycache__
 **/recipes_env
 **/.ycm_extra_conf.py
-
+**/*.swp
