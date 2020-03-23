@@ -6,5 +6,3 @@ admin.site.register(Product)
 admin.site.register(Ingridient)
 admin.site.register(Meal)
 admin.site.register(Category)
-
-
