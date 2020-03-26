@@ -27,8 +27,8 @@ class Ingridient(models.Model):
 
     @property
     def kcal(self):
-        return round((self.product.proteins * 4
-                     + self.product.carbohydrates * 4 
+        return round((self.product.proteins * 4 \
+                     + self.product.carbohydrates * 4 \
                      + self.product.fat * 9)/100 * self.grams, 2)
 
     def __str__(self):
@@ -64,9 +64,12 @@ class Meal(models.Model):
 
     @property
     def total_kcal(self):
+        """Returns all the kalories for the particulat meal"""
         return round(self.total_proteins * 4 \
-               + self.total_carbohydrates * 4 \
-               + self.total_fat * 9, 2)
+                     + self.total_carbohydrates * 4 \
+                     + self.total_fat * 9, 2)
 
     def __str__(self):
         return self.name
+
+

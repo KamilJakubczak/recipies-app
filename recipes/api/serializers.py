@@ -31,8 +31,8 @@ class MealSerializers(serializers.ModelSerializer):
         fields = '__all__'
 
     def create(self, validated_data):
-        ingridients_data = validated_data.pop('ingridient')
+        ingridients_data = validated_data.pop('ingridients')
         meal = Meal.objects.create(**validated_data)
         for ingridient_data in ingridients_data:
-            Ingridient.objects.create(meal=meal, **ingridients_data)
+            Ingridient.objects.create(meal=meal, **ingridient_data)
         return meal
