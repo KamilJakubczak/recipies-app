@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'e8yr#&lznjkhh&06e%=j(3e1grko871$#sh$7biz^ukzdk!v*u'
+SECRET_KEY = config.sc_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -87,11 +88,11 @@ WSGI_APPLICATION = 'recipes.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'recipes',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': '/opt/lampp/var/mysql/mysql.sock',
-        'PORT': '3306',
+        'NAME': config.name,
+        'USER': config.user,
+        'PASSWORD': config.password,
+        'HOST': config.host,
+        'PORT': config.port,
     }
 }
 # DATABASES = {
