@@ -1,6 +1,10 @@
 from rest_framework import serializers
 from .models import Product, Ingridient, Meal
 
+from rest_framework import *
+# from Django import *
+import rest_framework
+
 class ProductSerializers(serializers.ModelSerializer):
     class Meta:
         model = Product
